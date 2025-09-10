@@ -1,0 +1,26 @@
+\subsection{System achitecture}\label{subsec:system-achitecture}
+The System contains of three main components:
+\begin{itemize}
+    \item The web-client
+    \item The browser-extension
+    \item The server
+\end{itemize}.
+
+Together, the web-client and browser-extension act as the client in the server-client architecture and depend on the server.
+
+The web client will be implemented as a single-page web-app written in angular.js, while the browser extension will be implemented in react.
+The server will be based on Java-Spring.
+
+\subsection{Interfaces}\label{subsec:interfaces}
+External interfaces the system accesses are
+\begin{itemize}
+    \item The user-interfaces described in~\ref{sec:user-interface}
+    \item The browser-interface to access html content rendered to the user
+\end{itemize}.
+
+Internally, following interfaces are provided:
+\begin{itemize}
+    \item A REST-interface provided by the server and used by the clients
+    \item An interface that provides the html-files of the replics, provided by the server
+    \item An SQL-Database that is used by the server.
+\end{itemize}

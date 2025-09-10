@@ -1,0 +1,95 @@
+\subsection{Usage scenarios}\label{subsec:usage-scenarios}
+A common problem in the progressive world, where more and more aspects of life are getting digitalized, and therefore being put into the power of big corporations, is the sharing and making accessible of goods that have been bought by a private person.
+In past times, buying a book, newspaper or any sort of text-based article, directly included the ability of giving friends access to that piece of media by gifting the book, or photocopying it.
+\newline
+With new media this is not possible.
+E-books are bound to devices they're saved on, newspaper arcticles to the account they were read from, which has made it increasingly harder to share information with other people, without giving them access to personal information, account details or physical devices.
+Replic-Read aims to partially solve this issue, by offering a method to mirror an article from an online source, with a few strings attached:
+\begin{enumerate}
+    \item The user must've bought access to the piece of media.
+    This software does not help to commit piracy.
+    \item The access to the mirror link can be configured to prevent copyright infringement
+\end{enumerate}
+These features will be extended on in the following.
+
+\subsection{Acceptance criteria}\label{subsec:acceptance-criteria}
+
+\subsubsection{Account and Authentication}
+
+\begin{enumerate}[label=\textit{AC \arabic*}]
+    \item \label{ac:accounts:1} Accounts have an email, username, password, color and unique identifier.
+    \item \label{ac:accounts:2} The username, color and email of an account can be changed.
+    The new email has to be verified.
+    \item \label{ac:accounts:3} Authentication to an existing account happens by providing the credentials, i.e.\ username or email and password.
+    \item \label{ac:accounts:4} Users can connect, disconnect and create accounts by loggin in, logging out and signing up.
+    \item \label{ac:accounts:5} Accounts are in one of the following states:
+    \begin{enumerate}
+        \item \textbf{Active}: The account is active and can be used.
+        \item \textbf{Force-Inactive}: The account was deactivated by an admin.
+        \item \textbf{Inactive}: The account was deactivated by itself.
+        \item \textbf{Unverified}: The account's email is not verified.
+    \end{enumerate}
+\end{enumerate}
+
+\subsubsection{Replics}
+
+\begin{enumerate}[label=\textit{AC \arabic*}, resume]
+    \item \label{ac:replics:1} Replics have a timestamp, an original link, an acces-level and a media-mode.
+    \item \label{ac:replics:2} An acesses-level is one of the following: \begin{enumerate}
+                                                                             \item \textbf{None}: Replic is freely accessible.
+                                                                             \item \textbf{Password}: Access to the replic requires a password.
+                                                                             \item \textbf{Authenticated}: Access to the replic requires to be logged in.
+    \end{enumerate}
+    \item \label{ac:replics:3} A media-mode is one of the following: \begin{enumerate}
+                                                                         \item \textbf{All}: All media is captured
+                                                                         \item \textbf{Images}: Only images are captured
+                                                                         \item \textbf{None}: No media is captured.
+    \end{enumerate}
+    \item \label{ac:replics:4} Replics can have a description, an expiration date and a reference to the account that created it.
+    \item \label{ac:replics:5} Replics are in one of the following states: \begin{enumerate}
+                                                                               \item \textbf{Active}: Replic is active and accessible
+                                                                               \item \textbf{Inactive}: Replic was deactivated by the owner
+                                                                               \item \textbf{Removed}: Replic was removed by an admin
+    \end{enumerate}
+    \item \label{ac:replics:6} Users can view, search, filter and sort a list of the replics created through their account.
+    \item \label{ac:replics:7} Users can access metadata of other replics, and view their content, if they meet the requirements by the access-level.
+    \item \label{ac:replics:8} Replics track their accesses.
+\end{enumerate}
+
+\subsubsection{Configuration}
+Following configuration options are available for admins.
+\begin{enumerate}[label=\textit{AC \arabic*}, resume]
+    \item \label{ac:config:1} The server may require an account to create a replic.
+    \item \label{ac:config:2} There may be an account-based monthly/weekly/daily/hourly replic-limit.
+    \item \label{ac:config:3} There may be a minimum expiration date for replics.
+    \item \label{ac:config:4} Anonymous users may be able to file reports.
+    \item \label{ac:config:5} The server may limit what access-levels are available.
+    \item \label{ac:config:6} The server may disallow accounts to be created.
+    \item \label{ac:config:7} The server may require a new account to have their email verified.
+\end{enumerate}
+
+\subsubsection{Reporting}
+\begin{enumerate}[label=\textit{AC \arabic*}, resume]
+    \item \label{ac:reports:1} Replics can be reported.
+\end{enumerate}
+
+\subsubsection{Admins}
+\begin{enumerate}[label=\textit{AC \arabic*}, resume]
+    \item \label{ac:admins:1} One admin account exists whose credentials are provided to the server externally.
+    \item \label{ac:admins:2} Admin accounts have access to the admin panel.
+    \item \label{ac:admins:3} The admin panel can view all replics, reports and users.
+    \item \label{ac:admins:4} The admin panel can reset passwords of normal accounts.
+    \item \label{ac:admins:5} The admin panel can remove replics.
+    \item \label{ac:admins:6} The admin panel can deactivate and -reactivate accounts.
+    \item \label{ac:admins:7} The admin panel can review reports.
+    \item \label{ac:admins:8} The admin panel can restart the server.
+    \item \label{ac:admins:9} The admin panel can create users.
+    \item \label{ac:admins:10} The admin panel can perform config changes (\ref{ac:config:1}).
+\end{enumerate}
+
+\subsection{Must-Not-Criteria}\label{subsec:must-not-criteria}
+\begin{enumerate}[label=\textit{MN \arabic*}]
+    \item \label{mnc:1} A user manual, terms and conditions and privacy policy are delivered.
+    \item \label{mnc:2} The media that can be replic'd is not limited to HTML\@.
+    \item \label{mnc:3} The system helps to commit piracy.
+\end{enumerate}

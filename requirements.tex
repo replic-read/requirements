@@ -1,0 +1,59 @@
+%! Author = simon
+%! Date = 8/22/25
+
+% Preamble
+\documentclass{article}
+
+% Packages
+\usepackage{nopageno}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{amsfonts}
+\usepackage{siunitx}
+\graphicspath{{./media/use-cases/pdf/}{./media/activity-diagrams/pdf/}{./media/ui/ex/}{./media/ui/web/}}
+
+\title{Requirements for replic-read}
+\author{Simon Bumiller}
+
+% Document
+\begin{document}
+    \maketitle
+    \newpage
+
+    \setcounter{tocdepth}{2}
+    \tableofcontents
+    \newpage
+    \listoffigures
+    \newpage
+
+
+    \section{Introduction}\label{sec:introduction}
+    \input{1-introduction}
+
+
+    \section{Product overview}\label{sec:product-overview}
+    \input{2-product-overview}
+
+
+    \section{Product features}\label{sec:product-features}
+    \input{3-product-features}
+
+
+    \section{Nonfunctional criteria}\label{sec:nonfunctional-criteria}
+    \input{4-nonfunctional-criteria}
+
+
+    \section{User interface}\label{sec:user-interface}
+    \input{5-user-interface}
+
+
+    \section{Usage Scenarios}\label{sec:usage-scenarios}
+    \input{6-usage-scenarios}
+
+
+    \section{Product environment}\label{sec:product-environment}
+    \input{7-product-environment}
+
+\end{document}
