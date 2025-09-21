@@ -15,6 +15,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Install pdflatex
-        run: sudo apt-get install texlive-latex-base
+        run: sudo apt-get install texlive
       - name: Run pdflatex
         run: pdflatex --shell-escape requirements.tex
