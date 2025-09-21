@@ -25,8 +25,7 @@ These features will be extended on in the following.
     \item \label{ac:accounts:5} Accounts are in one of the following states:
     \begin{enumerate}
         \item \textbf{Active}: The account is active and can be used.
-        \item \textbf{Force-Inactive}: The account was deactivated by an admin.
-        \item \textbf{Inactive}: The account was deactivated by itself.
+        \item \textbf{Inactive}: The account was deactivated by an admin.
         \item \textbf{Unverified}: The account's email is not verified.
     \end{enumerate}
 \end{enumerate}
@@ -59,13 +58,15 @@ These features will be extended on in the following.
 \subsubsection{Configuration}
 Following configuration options are available for admins.
 \begin{enumerate}[label=\textit{AC \arabic*}, resume]
-    \item \label{ac:config:1} The server may require an account to create a replic.
+    \item \label{ac:config:1} The server may configure which accounts can create replics: \begin{enumerate}
+                                                                                              \item \textbf{All:} All users can create replics.
+                                                                                              \item \textbf{Only accounts:} An account is required to create replics.
+                                                                                              \item \textbf{Only verified accounts:} Only users with an account that has their email verified can create replics..
+    \end{enumerate}
     \item \label{ac:config:2} There may be an account-based monthly/weekly/daily/hourly replic-limit.
     \item \label{ac:config:3} There may be a minimum expiration date for replics.
-    \item \label{ac:config:4} Anonymous users may be able to file reports.
-    \item \label{ac:config:5} The server may limit what access-levels are available.
-    \item \label{ac:config:6} The server may disallow accounts to be created.
-    \item \label{ac:config:7} The server may require a new account to have their email verified.
+    \item \label{ac:config:4} The server may limit what access-levels are available.
+    \item \label{ac:config:5} The server may disallow accounts to be created.
 \end{enumerate}
 
 \subsubsection{Reporting}
