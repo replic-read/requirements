@@ -10,6 +10,7 @@ jobs:
   build_latex:
     name: Build latex
     runs-on: ubuntu-latest
+    permissions: write-all
     steps:
     - name: Set up Git repository
       uses: actions/checkout@v4
