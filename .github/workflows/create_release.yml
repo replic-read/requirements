@@ -1,0 +1,19 @@
+name: Create Release
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  create-pdf:
+    name: Create the PDF
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Run pdflatex command
+        uses: xu-cheng/latex-action@v4
+        with:
+          root_file: requirements.tex
+          latexmk_shell_escape: true
