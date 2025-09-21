@@ -23,6 +23,29 @@ The following requirements are imposed:
 The server must be exposed to the internet via a fixed domain, that is given to the server via configuration.
 Other systems may be supported.
 
+\subsection{State overview}\label{subsec:state-management}
+\subsubsection{User}
+As specified in~\ref{ac:accounts:5},\ref{ac:accounts:4}, users and their account have a specific state.
+This is visualized in Figure~\ref{fig:user-state}.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{user-state}
+    \caption{State of a user and its' account.}
+    \label{fig:user-state}
+\end{figure}
+
+\subsubsection{Replic}
+As specified in~\ref{ac:replics:5}, a replic can be in multiple states.
+This is visualized in Figure~\ref{fig:replic-state}.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{replic-state}
+    \caption{State of a replic.}
+    \label{fig:replic-state}
+\end{figure}
+
 \subsection{Use-cases}\label{subsec:use-cases}
 
 \subsubsection{Account management}
