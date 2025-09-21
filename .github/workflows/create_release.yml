@@ -7,14 +7,18 @@ on:
   workflow_dispatch:
 
 jobs:
-  create-pdf:
-    name: Create the PDF
+  build_latex:
+    name: Build latex
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-      - name: Install pdflatex
-        run: sudo apt-get install texlive
-      - name: Run pdflatex
-        run: pdflatex --shell-escape requirements.tex
+    - name: Set up Git repository
+      uses: actions/checkout@v4
+    - name: Compile LaTeX document
+      uses: xu-cheng/latex-action@v4
+      with:
+        root_file: requirements.tex
+    - name: Upload PDF file
+      uses: actions/upload-artifact@v4
+      with:
+        name: Requirements
+        path: requirements.pdf
