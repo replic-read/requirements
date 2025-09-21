@@ -14,8 +14,7 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      - name: Run pdflatex command
-        uses: xu-cheng/latex-action@v4
-        with:
-          root_file: requirements.tex
-          latexmk_shell_escape: true
+      - name: Install pdflatex
+        run: sudo apt update && sudo apt install pdflatex
+      - name: Run pdflatex
+        run: pdflatex --shell-escape requirements.pdf
