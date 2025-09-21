@@ -72,7 +72,7 @@ The user then has the oppurtinity opportunity to verify the new email-address by
 
 \subsubsection{Creating a replic}\label{subsubsec:create-replic}
 \textbf{Use-case:} Create replic \newline
-\textbf{Requirements:}~\ref{ac:replics:1}~\ref{ac:replics:2}~\ref{ac:replics:3}~\ref{ac:replics:4} \newline
+\textbf{Requirements:}~\ref{ac:replics:1}~~\ref{ac:replics:2}~\ref{ac:replics:3} \newline
 \textbf{Target:} A new replic will be created. \newline
 \textbf{Condition:} The user has the target tab opened in the browser.
 The create-replic-view is visible. \newline
@@ -86,7 +86,7 @@ An informative message with a link to the replic is shown to the user.
 
 \subsubsection{Deactivating a replic}\label{subsubsec:deactivate-replic}
 \textbf{Use-case:} Deactivate replic \newline
-\textbf{Requirements:}~\ref{ac:replics:5} \newline
+\textbf{Requirements:}~\ref{ac:replics:4} \newline
 \textbf{Target:} The replic will be \textit{inactive}. \newline
 \textbf{Condition:} The account of the user owns the replic.
 The replic must be~\textit{active}.
@@ -99,7 +99,7 @@ The own-replics-view is visible. \newline
 
 \subsubsection{Reactivating a replic}\label{subsubsec:reactivate-replic}
 \textbf{Use-case:} Reactivate replic \newline
-\textbf{Requirements:}~\ref{ac:replics:5} \newline
+\textbf{Requirements:}~\ref{ac:replics:4} \newline
 \textbf{Target:} The replic will be~\textit{active}. \newline
 \textbf{Condition:} The account of the user owns the replic.
 The replic must be~\textit{inactive}.
@@ -112,17 +112,16 @@ The own-replics-view is visible. \newline
 
 \subsubsection{Selecting a replic}\label{subsubsec:select-replic}
 \textbf{Use-case:} Select a replic to view it \newline
-\textbf{Requirements:}~\ref{ac:replics:7} \newline
+\textbf{Requirements:}~\ref{ac:replics:6} \newline
 \textbf{Target:} The view-replic screen will be opened. \newline
 \textbf{Condition:} The own-replics-view is visible. \newline
 \textbf{Postcondidion success:} The replic is shown. \newline
 \textbf{Postcondition failure:} The replic is not shown. \newline
 \textbf{Actors:} A user. \newline
 \textbf{Event:} The user selects a replic, e.g.\ by clicking on it in an overview, entering the link in the browser or scanning the QR-code. \newline
-\textbf{Description}: If the access-level is \textit{none}, the user is redirected to the replic-view.
-If the access-level is \textit{password}, the user is redirected to the screen where the password for the replic can be entered.
-Upon entering the correct password, the user is redirected to the replic-screen, otherwise shown an error.
-If the access-level is \textit{authenticated}, the user is redirected to the login-view if it is unauthenticated, otherwise the user is directly redirected to the replic-view.
+\textbf{Description}: If the user can not access replics, an error is shown.
+Otherwise, the user is redirected to the replic.
+If a password is required, the user needs to enter that before being able to view the replic.
 
 \subsubsection{Report replic}\label{subsubsec:report-replic}
 \textbf{Use-case:} Report replic \newline
@@ -138,7 +137,7 @@ If required by the server, the user is logged into an \textit{active} account. \
 
 \subsubsection{Copy replic links}\label{subsubsec:copy-replic-links}
 \textbf{Use-case:} Copy original link, copy target link \newline
-\textbf{Requirements:}~\ref{ac:replics:7} \newline
+\textbf{Requirements:}~\ref{ac:replics:6} \newline
 \textbf{Target:} The selected link will be copied. \newline
 \textbf{Condition:} The replic-view is visible. \newline
 \textbf{Postcondidion success:} The link has been copied. \newline
@@ -149,18 +148,18 @@ If required by the server, the user is logged into an \textit{active} account. \
 
 \subsubsection{Viewing a replic}\label{subsubsec:view-replic}
 \textbf{Use-case:} Observe description, original link, target link, QR-code \newline
-\textbf{Requirements:}~\ref{ac:replics:7} \newline
+\textbf{Requirements:}~\ref{ac:replics:6} \newline
 \textbf{Target:} The replic data is shown. \newline
-\textbf{Condition:} The user can fulfill the requirements by the access-level. \newline
+\textbf{Condition:} The user can access replics. \newline
 \textbf{Postcondidion success:} The data is shown. \newline
 \textbf{Postcondition failure:} The data is not shown. \newline
 \textbf{Actors:} A user. \newline
 \textbf{Event:} The user is directed to the replic-view screen. \newline
-\textbf{Description}: The user can view the data related to the replic, e.g.\ the links, access-level etc..
+\textbf{Description}: The user can view the data related to the replic, e.g.\ the links, size, etc..
 
 \subsubsection{Open target link}\label{subsubsec:open-target-link}
 \textbf{Use-case:} Open target link \newline
-\textbf{Requirements:}~\ref{ac:replics:7}\newline
+\textbf{Requirements:}~\ref{ac:replics:6}\newline
 \textbf{Target:} The replic's captured media document is opened in another browser tab. \newline
 \textbf{Condition:} The replic-view is visible. \newline
 \textbf{Postcondidion success:} The new tab is opened. \newline
@@ -299,5 +298,4 @@ The process ends either when an account and session has been created, or when th
 \end{figure}
 
 Figure~\ref{fig:ad:select-replic} shows the steps to be done when the user selects a replic.
-The outcome depends mostly on the access-level.
 The flow finishes either when the user was redirected to the replic, or when the user could not be redirected.

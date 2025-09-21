@@ -33,45 +33,39 @@ These features will be extended on in the following.
 \subsubsection{Replics}
 
 \begin{enumerate}[label=\textit{AC \arabic*}, resume]
-    \item \label{ac:replics:1} Replics have a timestamp, an original link, an acces-level and a media-mode.
-    \item \label{ac:replics:2} An acesses-level is one of the following: \begin{enumerate}
-                                                                             \item \textbf{None}: Replic is freely accessible.
-                                                                             \item \textbf{Password}: Access to the replic requires a password.
-                                                                             \item \textbf{Authenticated}: Access to the replic requires to be logged in.
-    \end{enumerate}
-    \item \label{ac:replics:3} A media-mode is one of the following: \begin{enumerate}
+    \item \label{ac:replics:1} Replics have a timestamp, an original link and a media-mode.
+    \item \label{ac:replics:2} A media-mode is one of the following: \begin{enumerate}
                                                                          \item \textbf{All}: All media is captured
                                                                          \item \textbf{Images}: Only images are captured
                                                                          \item \textbf{None}: No media is captured.
     \end{enumerate}
-    \item \label{ac:replics:4} Replics can have a description, an expiration date and a reference to the account that created it.
-    \item \label{ac:replics:5} Replics are in one of the following states: \begin{enumerate}
+    \item \label{ac:replics:3} Replics can have a description, an expiration date, a password and a reference to the account that created it.
+    \item \label{ac:replics:4} Replics are in one of the following states: \begin{enumerate}
                                                                                \item \textbf{Active}: Replic is active and accessible
                                                                                \item \textbf{Inactive}: Replic was deactivated by the owner
                                                                                \item \textbf{Removed}: Replic was removed by an admin
     \end{enumerate}
-    \item \label{ac:replics:6} Users can view, search, filter and sort a list of the replics created through their account.
-    \item \label{ac:replics:7} Users can access metadata of other replics, and view their content, if they meet the requirements by the access-level.
-    \item \label{ac:replics:8} Replics track their accesses.
+    \item \label{ac:replics:5} Users can view, search, filter and sort a list of the replics created through their account.
+    \item \label{ac:replics:6} Users can access metadata of other replics, and view their content, if they are allowed to access replics.
+    \item \label{ac:replics:7} Replics track their accesses.
 \end{enumerate}
 
 \subsubsection{Configuration}
 Following configuration options are available for admins.
 \begin{enumerate}[label=\textit{AC \arabic*}, resume]
-    \item \label{ac:config:1} The server may configure which accounts can create replics: \begin{enumerate}
+    \item \label{ac:config:1} An admin may configure which users can create replics, access replics and report replics: \begin{enumerate}
                                                                                               \item \textbf{All:} All users can create replics.
                                                                                               \item \textbf{Only accounts:} An account is required to create replics.
                                                                                               \item \textbf{Only verified accounts:} Only users with an account that has their email verified can create replics..
     \end{enumerate}
-    \item \label{ac:config:2} There may be an account-based monthly/weekly/daily/hourly replic-limit.
-    \item \label{ac:config:3} There may be a minimum expiration date for replics.
-    \item \label{ac:config:4} The server may limit what access-levels are available.
-    \item \label{ac:config:5} The server may disallow accounts to be created.
+    \item \label{ac:config:2} There may be an account-based yearly/monthly/daily replic-limit.
+    \item \label{ac:config:3} There may be a maximum period between replic-creation and replic-expiration.
+    \item \label{ac:config:4} The server may disallow accounts to be created.
 \end{enumerate}
 
 \subsubsection{Reporting}
 \begin{enumerate}[label=\textit{AC \arabic*}, resume]
-    \item \label{ac:reports:1} Replics can be reported.
+    \item \label{ac:reports:1} Replics can be reported by creating a report.
 \end{enumerate}
 
 \subsubsection{Admins}
@@ -82,7 +76,7 @@ Following configuration options are available for admins.
     \item \label{ac:admins:4} The admin panel can reset passwords of normal accounts.
     \item \label{ac:admins:5} The admin panel can remove replics.
     \item \label{ac:admins:6} The admin panel can deactivate and -reactivate accounts.
-    \item \label{ac:admins:7} The admin panel can review reports.
+    \item \label{ac:admins:7} The admin panel can review or close reports.
     \item \label{ac:admins:8} The admin panel can restart the server.
     \item \label{ac:admins:9} The admin panel can create users.
     \item \label{ac:admins:10} The admin panel can perform config changes (\ref{ac:config:1}).
