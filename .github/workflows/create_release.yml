@@ -20,5 +20,22 @@ jobs:
     - name: Upload PDF file
       uses: actions/upload-artifact@v4
       with:
-        name: Requirements
+        name: Requirements.pdf
         path: requirements.pdf
+        
+    - name: Get date and time
+      id: date
+      run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+    - name: Create Tag
+      uses: tvdias/github-tagger@v0.0.1
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        tag: ${{ steps.date.outputs.date }}
+    - name: Create release
+      uses: softprops/action-gh-release@v2
+      with:
+        repository: replic-read/requirements
+        files: requirements.pdf
+        name: Requirements from ${{ steps.date.outputs.date }}
+        tag_name: ${{ steps.date.outputs.date }}
+    
