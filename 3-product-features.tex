@@ -23,32 +23,6 @@ If the credentials are invalid, an error is shown.
 \textbf{Event:} User clicks logout-button. \newline
 \textbf{Description}: The session of the user is removed and the user redirected.
 
-\subsubsection{Deactivate account}\label{subsubsec:deactivate-acc}
-\textbf{Use-case:} Deactivate account \newline
-\textbf{Requirements:}~\ref{ac:accounts:5} \newline
-\textbf{Target:} The account will be \textit{inactive}. \newline
-\textbf{Condition:} The account-view is visible.
-The account must be \textit{active} \newline
-\textbf{Postcondidion success:} The account is \textit{inactive}. \newline
-\textbf{Postcondition failure:} The account is not \textit{inactive}. \newline
-\textbf{Actors:} A user that is logged in an account. \newline
-\textbf{Event:} User clicks deactivate-button. \newline
-\textbf{Description}: The user authenticates before the deactivation happens.
-If the authentication is successful, the account is set to \textit{inactive} and the user is logged out.
-If the authentication is not successful, an error is shown.
-
-\subsubsection{Reactivate account}\label{subsubsec:reactivate-acc}
-\textbf{Use-case:} Reactivate account \newline
-\textbf{Requirements:}~\ref{ac:accounts:5} \newline
-\textbf{Target:} The account will be \textit{active}. \newline
-\textbf{Condition:} The account must be \textit{inactive}.
-The reactivate-account-view is visible. \newline
-\textbf{Postcondidion success:} The account is \textit{active}. \newline
-\textbf{Postcondition failure:} The account is not \textit{active}. \newline
-\textbf{Actors:} A user that is logged into a deactivated account. \newline
-\textbf{Event:} The user clicks the reactivate-account button. \newline
-\textbf{Description}: The account is set to \textit{active} and the user redirected.
-
 \subsubsection{Sign-up}\label{subsubsec:signup}
 \textbf{Use-case:} Signup \newline
 \textbf{Requirements:}~\ref{ac:accounts:4} \newline
@@ -255,6 +229,18 @@ The all-accounts-view is visble. \newline
 \textbf{Event:} The user clicks the reactivate button. \newline
 \textbf{Description}: The system sets the target account to \textit{active}
 
+\subsubsection{Deactivating an account (Admin)}\label{subsubsec:deactivate-acc-admin}
+\textbf{Use-case:} Deactivate account \newline
+\textbf{Requirements:}~\ref{ac:admins:6} \newline
+\textbf{Target:} The target account will be \textit{force-inactive}. \newline
+\textbf{Condition:} The account is currently \textit{active}.
+The all-accounts-view is visible. \newline
+\textbf{Postcondidion success:} The account is \textit{force-inactive}. \newline
+\textbf{Postcondition failure:} The account is still \textit{force-inactive}. \newline
+\textbf{Actors:} A user that is logged into an admin-account. \newline
+\textbf{Event:} The user clicks the deactivate button. \newline
+\textbf{Description}: The system sets the target account to \textit{force-inactive}
+
 \subsubsection{Reset password (Admin)}\label{subsubsec:reset-pass}
 \textbf{Use-case:} Reset account's password \newline
 \textbf{Requirements:}~\ref{ac:admins:4} \newline
@@ -278,19 +264,6 @@ The replic must be \textit{active} \newline
 \textbf{Actors:} A user that is logged in an admin-account. \newline
 \textbf{Event:} The user clicks the remove-replic button. \newline
 \textbf{Description}: The system sets the replic to \textit{removed}.
-
-
-\subsubsection{Deactivating an account (Admin)}\label{subsubsec:deactivate-acc-admin}
-\textbf{Use-case:} Deactivate account \newline
-\textbf{Requirements:}~\ref{ac:admins:6} \newline
-\textbf{Target:} The target account will be \textit{force-inactive}. \newline
-\textbf{Condition:} The account is currently \textit{active}.
-The all-accounts-view is visible. \newline
-\textbf{Postcondidion success:} The account is \textit{force-inactive}. \newline
-\textbf{Postcondition failure:} The account is still \textit{force-inactive}. \newline
-\textbf{Actors:} A user that is logged into an admin-account. \newline
-\textbf{Event:} The user clicks the deactivate button. \newline
-\textbf{Description}: The system sets the target account to \textit{force-inactive}
 
 \subsection{Activity diagrams}\label{subsec:activity-diagrams}
 In the following, the more complex product features will be described in activity-diagrams.
