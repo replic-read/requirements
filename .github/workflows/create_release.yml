@@ -17,4 +17,4 @@ jobs:
       - name: Install pdflatex
         run: sudo apt-get install texlive-latex-base
       - name: Run pdflatex
-        run: pdflatex --shell-escape requirements.pdf
+        run: ls && pdflatex --shell-escape /requirements/requirements.tex
