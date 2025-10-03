@@ -38,7 +38,7 @@ names_map_ex = {
     "Signup.pdf": "ex-signup.pdf",
 }
 
-ui_dir = "./../media/ui/"
+ui_dir = "../content/ui/"
 web_dir = ui_dir + "web/"
 ex_dir = ui_dir + "ex/"
 
