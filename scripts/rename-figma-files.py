@@ -22,7 +22,10 @@ names_map_web = {
     "ServerConfig.pdf": "web-config.pdf",
     "Signup.pdf": "web-signup.pdf",
     "ViewReplic_Deactivated=No.pdf": "web-replic-active.pdf",
-    "ViewReplic_Deactivated=Yes.pdf": "web-replic-inactive.pdf"
+    "ViewReplic_Deactivated=Yes.pdf": "web-replic-inactive.pdf",
+    "EmailNotVerified.pdf": "web-email-not-verified.pdf",
+    "EmailVerification_Success=No.pdf": "web-email-verification-error.pdf",
+    "EmailVerification_Success=Yes.pdf": "web-email-verification-success.pdf"
 }
 
 names_map_ex = {

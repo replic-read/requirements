@@ -255,3 +255,34 @@ If the replic is not accessible anymore, it is shown to the user (\ref{fig:web-r
     \caption{Inactive replic view}
     \label{fig:web-replic-inactive-view}
 \end{figure}
+
+\subsubsection{Email-Verification view}
+The email-verification view is shown to the user when an email-erification link, that was sent via email, was used.
+It either shows a message indicating the success (\ref{fig:web-email-verification-error}) or the failure (\ref{fig:web-email-verification-success}) of the verification process.
+
+\begin{figure}
+    \centering
+    \fbox{\includegraphics[width=12cm]{web-email-verification-error}}
+
+    \caption{Email-verification view with failure status}
+    \label{fig:web-email-verification-error}
+\end{figure}
+\begin{figure}
+    \centering
+
+    \fbox{\includegraphics[width=12cm]{web-email-verification-success}}
+
+    \caption{Email-verification view with success status}
+    \label{fig:web-email-verification-success}
+\end{figure}
+
+\subsubsection{Email-not-verified view}
+The email-not-verified view (\ref{fig:web-email-not-verified}) is shown to the user when an operation is attempted that requires the email to be verified.
+
+\begin{figure}
+    \centering
+    \fbox{\includegraphics[width=12cm]{web-email-not-verified}}
+
+    \caption{Email-not-verified view}
+    \label{fig:web-email-not-verified}
+\end{figure}
