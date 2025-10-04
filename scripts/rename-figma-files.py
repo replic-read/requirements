@@ -21,8 +21,9 @@ names_map_web = {
     "OwnReplics_Expanded=Yes.pdf": "web-user-replics-config.pdf",
     "ServerConfig.pdf": "web-config.pdf",
     "Signup.pdf": "web-signup.pdf",
-    "ViewReplic_Deactivated=No.pdf": "web-replic-active.pdf",
-    "ViewReplic_Deactivated=Yes.pdf": "web-replic-inactive.pdf",
+    "ViewReplic_Deactivated=No, ViewReplic_PasswordRequired=No.pdf": "web-replic-active.pdf",
+    "ViewReplic_Deactivated=Yes, ViewReplic_PasswordRequired=No.pdf": "web-replic-inactive.pdf",
+    "ViewReplic_Deactivated=No, ViewReplic_PasswordRequired=Yes.pdf": "web-replic-active-password.pdf",
     "EmailNotVerified.pdf": "web-email-not-verified.pdf",
     "EmailVerification_Success=No.pdf": "web-email-verification-error.pdf",
     "EmailVerification_Success=Yes.pdf": "web-email-verification-success.pdf"
